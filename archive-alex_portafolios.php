@@ -21,7 +21,7 @@ get_header(); ?>
 				<?php
 				    $trabajos = array( 'posts_per_page' => 1,
 				    				   'post_type' => 'alex_portafolios',
-				    				   'post_in' => 4);
+				    				   'category_name' => 'destacado_web');
 				    $loop = new WP_Query( $trabajos );
 				    if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 				    
@@ -42,7 +42,7 @@ get_header(); ?>
 				<?php
 				    $trabajos = array( 'posts_per_page' => 6,
 				    				   'post_type' => 'alex_portafolios',
-				    				   'offset' => 1 );
+				    				   'category_name' => 'webs, wordpress, e-commerces' );
 				    $loop = new WP_Query( $trabajos );
 				     if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 
