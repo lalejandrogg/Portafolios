@@ -168,7 +168,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function wpdocs_excerpt_more( $more ) {
     return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
         get_permalink( get_the_ID() ),
-        __( 'Leer más <span class="dashicons dashicons-arrow-right-alt"></span>', 'textdomain' )
+        __( 'Leer más <span class="dashicons dashicons-arrow-right-alt flecha"></span>', 'textdomain' )
     );
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
