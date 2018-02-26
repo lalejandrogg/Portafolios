@@ -779,15 +779,21 @@ hr{
     background-repeat: no-repeat;
 }
 
-
+/*******************************************************************************************************/
+/*******************************************************************************************************/
 /*         PORTAFOLIOS      */
 
+
+/*****************************/
 /*Destacado*/
+/*****************************/
+
 
 .trabajo-principal a{
 	color:#494545;
 }
 .post-thumbnail1, .resto-trabajos{
+	clear: both;
 	width: 98%;
 	display: block;
 	margin: 0px auto;
@@ -834,7 +840,10 @@ hr{
 }
 
 
+/*****************************/
 /*  Resto de Trabajos */
+/*****************************/
+
 .resto-trabajos .trabajo{
 	float: left;
     width: 45%;
@@ -915,16 +924,145 @@ hr{
     to {color: #0101DF;}
 }
 
-
+/*******************************************************************************************************/
+/*******************************************************************************************************/
 /*    TRABAJOS Y PROYECTOS  */
 
 
 
+/*******************************************************************************************************/
+/*******************************************************************************************************/
 /*  BLOG   */
 
 
+/*****************************/
+/*  Menu del blog */
+/*****************************/
+
+.menu-blog-container{
+	clear: both;
+	width: 100%;
+	display: block;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	font-family: Arial;
+	font-weight: bolder;
+	font-size: 20px;
+	color:#fff;
+	padding: 10px;
+}
+
+.menu-blog-container ul {
+	list-style: none;
+    margin: 0;
+}
+.menu-blog-container li {
+	display: inline-block;
+}
+
+.menuBlog a {
+	display: block;
+	text-decoration: none;
+	color:grey;
+	margin-right: 25px;
+	position: relative;
+	padding-bottom: 5px;
+}
+.menuBlog a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  width: 0;
+  background-color: #F3F781;
+  animation: width 0.5s;
+  transition: all 0.4s;
+  border-radius: 2px;
+}
+
+.menuBlog a:hover:before {
+  width: 100%;
+}
+
+.menuBlog{
+	position: relative;
+}
+.menuBlog form{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+input.search-submit{
+	position: relative;
+	background-color: transparent;
+	border: none;
+}
+
+.menuBlog span{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-size: 25px;
+	color: grey;
+}
 
 
+/*****************************/
+/*  Post principal  */
+/*****************************/
+
+.principal, .resto-post{
+	clear: both;
+	width: 98%;
+	display: block;
+	margin: 0px auto;
+	margin-top: 20px;
+	position: relative;
+
+}
+.principal h2{
+	clear: both;
+	color:#000;
+}
+.principal  img{
+	width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+
+.principal  img, .post img{
+	border: 2px solid #494545;	
+}
+
+/*****************************/
+/*  Resto de Posts */
+/*****************************/
+
+.resto-post .post{
+	float: left;
+    width: 45%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.post h2{
+	font-size: 120%;
+	width: 70%;
+    color: #E6E6E6;
+    text-align: center;
+    background-color: #494545;	
+}
+
+
+/*******************************************************************************************************/
+/*******************************************************************************************************/
 /*   RESPONSIVE            */
 
 @media (max-width: 500px){

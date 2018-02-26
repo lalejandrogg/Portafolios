@@ -4,21 +4,28 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
+			<div class="menuBlog">
+				<?php wp_nav_menu($args = array('menu' => 'Blog'));
+				get_search_form (); ?>
 
-			<div class="trabajo-principal">
+			</div>
+			
+			<div class="post-principal">
 				<?php
-				    $trabajos = array( 'posts_per_page' => 1,
+				    $posts = array( 'posts_per_page' => 1,
 				    				   'post_type' => 'post',
 				    				   'offset' => 0);
-				    $loop = new WP_Query( $trabajos );
+				    $loop = new WP_Query( $posts );
 				    if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 				    
 				       
-				       <a href="<?php the_permalink(); ?>"><div class="post-thumbnail1">
+				      	<div class="principal">
+
 				       		<h2><?php the_title(); ?></h2>
-				 			<?php the_post_thumbnail();?>
-				 			<span class="dashicons dashicons-plus-alt seguir-leyendo"></span>
-				 		</div></a> 
+
+				 			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
+
+				 		</div>
 
 				         <?php endwhile;
 				          endif; 
@@ -26,25 +33,24 @@ get_header(); ?>
 				?>
 			</div>
 
-			<div class="resto-trabajos">
+			<div class="resto-post">
 				<?php
-				    $trabajos = array( 'posts_per_page' => 6,
+				    $posts = array( 'posts_per_page' => 6,
 				    				   'post_type' => 'post',
 				    				   'offset' => 1 );
-				    $loop = new WP_Query( $trabajos );
+				    $loop = new WP_Query( $posts );
+
 				     if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 
 				    
-				 	<div class="trabajo">
+				 	<div class="post">
 
-				       <div class="post-thumbnail">
-				 			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-				 		</div>
+				       <?php the_post_thumbnail(); ?>
 
-				 		<span class="dashicons dashicons-plus-alt seguir-leyendo"></span>
+				 		<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
-				 		<h2><?php the_title(); ?></h2>
 				    	<?php the_excerpt(); ?>	
+
 				    </div>
 				    	  
 
@@ -57,5 +63,5 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-
-<?php get_footer(); ?>
+<?php get_sidebar();
+ get_footer(); ?>
