@@ -2,8 +2,6 @@
 /**
  * The template for displaying search results pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
  * @package AlexGarcia
  */
 
@@ -12,40 +10,51 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) : ?>
+			<div class="menuBlog">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'alexgarcia' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
+                <?php wp_nav_menu($args = array('menu' => 'Blog'));
+                get_search_form (); ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+                <hr class="hrBlog"/>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+            </div>
 
-			endwhile;
+            <div class="columna1">
 
-			the_posts_navigation();
+				<?php
+				if ( have_posts() ) : ?>
 
-		else :
+					<header class="page-header">
+						<h1 class="page-title2"><?php
+							/* translators: %s: search query. */
+							printf( esc_html__( 'Estos son los resultados para: %s', 'alexgarcia' ), '<span>' . get_search_query() . '</span>' );
+						?></h1>
+					</header><!-- .page-header -->
 
-			get_template_part( 'template-parts/content', 'none' );
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
 
-		endif; ?>
+						get_template_part( 'template-parts/content', 'search' );
+
+					endwhile;
+
+					the_posts_navigation();
+
+				else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+				endif; ?>
+
+			</div>	
+
+			<div class="columna2">
+				<?php get_sidebar(); ?>
+			</div>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

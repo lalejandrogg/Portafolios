@@ -1,3 +1,4 @@
+
 <?php
 /**
  * AlexGarcia functions and definitions
@@ -107,8 +108,8 @@ function alexgarcia_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'alexgarcia' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'alexgarcia_widgets_init' );
@@ -172,6 +173,25 @@ function wpdocs_excerpt_more( $more ) {
     );
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+/**
+ * Funcion para mostrar solo los post y entradas cuando utilizas la busqueda y descartar las páginas
+ */
+
+ function my_custom_searchengine($query) { if ($query->is_search && !is_admin()) { $query->set('post_type', array('post')); } return $query; } add_filter('pre_get_posts', 'my_custom_searchengine'); 
+
+/**
+ * Mostrar los Dashicons auque no estes registrado en Wordpress
+ */
+ add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+ function load_dashicons_front_end() {
+   wp_enqueue_style( 'dashicons' );
+ }
+
+
+
+
 
 
 

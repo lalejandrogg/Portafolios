@@ -2,8 +2,6 @@
 /**
  * Template part for displaying a message that posts cannot be found
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package AlexGarcia
  */
 
@@ -11,7 +9,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'alexgarcia' ); ?></h1>
+		<h1 class="page-title2"><?php esc_html_e( '¡Vaya, no hay resultados!', 'alexgarcia' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -35,15 +33,13 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'alexgarcia' ); ?></p>
-			<?php
-				get_search_form();
+			<p class="noResultados"><?php esc_html_e( 'Lo siento, pero no existen resultados para esta busqueda. Porfavor, inténtalo con otra palabra.', 'alexgarcia' ); ?></p>
+			<?php		
 
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'alexgarcia' ); ?></p>
+			<p class="noResultados"><?php esc_html_e( 'En este momento no tenemos ningún post aquí, pero puedes ver los post del resto de secciones.', 'alexgarcia' ); ?></p>
 			<?php
-				get_search_form();
 
 		endif; ?>
 	</div><!-- .page-content -->

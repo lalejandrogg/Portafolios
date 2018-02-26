@@ -594,6 +594,10 @@ a:hover, a:active {
 	color: #F3F781;
 }
 
+span.dashicon{
+	display:block;
+}
+
 .dashicons-menu{
 		display: none;
 	}
@@ -733,10 +737,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
-}
+
 
 .widget select {
 	max-width: 100%;
@@ -773,7 +774,7 @@ hr{
 	background-color: #F3F781;
 }
 .fondo{
-	background-image: url(http://pruebas.local/wp-content/uploads/adrian-infernus-394882.jpg);
+	background-image: url(http://pruebas.local/wp-content/uploads/Fondo.jpg);
     background-position: center center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -784,77 +785,34 @@ hr{
 /*         PORTAFOLIOS      */
 
 
-/*****************************/
-/*Destacado*/
-/*****************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+/*    TRABAJOS Y PROYECTOS  */
 
-
-.trabajo-principal a{
-	color:#494545;
-}
-.post-thumbnail1, .resto-trabajos{
-	clear: both;
-	width: 98%;
-	display: block;
+.trabajos, .proyectos{
+	width: 90%;
 	margin: 0px auto;
-	margin-top: 20px;
-	position: relative;
-
-}
-.post-thumbnail1 h2{
-	clear: both;
-	position: absolute;
-	margin: 0px auto;
-	top:25%;
-	right: 43%;
-	color:#000;
-	font-size: 50px;
-	z-index:-1; 
-}
-.post-thumbnail1  img{
-	width: 100%;
-    height: auto;
-    margin: 0px auto;
 }
 
-.post-thumbnail1 span{
-  	position: absolute;
-	top:50%;
-	right: 50%;
-	color:#000;
-	font-size: 50px;
-	z-index:-1; 
-}
-
-.post-thumbnail1 img:hover{
-   opacity: 0.5;
-  -webkit-transition: opacity 1500ms;
-  -moz-transition: opacity 1500ms;
-  -o-transition: opacity 1500ms;
-  -ms-transition: opacity 1500ms;
-  transition: opacity 1500ms;
-}
-
-.post-thumbnail1  img, .trabajo img{
-	border: 2px solid #494545;	
-}
-
-
-/*****************************/
-/*  Resto de Trabajos */
-/*****************************/
-
-.resto-trabajos .trabajo{
+.trabajos .trabajo, .proyectos .proyecto{
 	float: left;
     width: 45%;
     margin-right: 2.5%;
     margin-left: 2.5%;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     margin-top: 40px;
 }
 
-.trabajo h2{
+.proyectos .tituloProyectos{
+	clear: both;
+	padding-top: 50px;
+}
+
+.trabajo .post-thumbnail img, .proyecto .post-thumbnail img{
+   border: 2px solid #494545;
+}
+.trabajo h2, .proyecto h2{
 	font-size: 120%;
 	width: 70%;
     color: #E6E6E6;
@@ -862,22 +820,22 @@ hr{
     background-color: #494545;	
 }
 
-.trabajo .seguir-leyendo{
+.trabajo .seguir-leyendo, .proyecto .seguir-leyendo{
 	position: absolute;
-	top:20%;
+	top:30%;
 	right: 50%;
 	color:#000;
 	font-size: 50px;
 	z-index:-1;
 }
 
-.trabajo .flecha p{
+.trabajo .flecha p, .proyecto .flecha p{
 	display: block;
 	font-size: 20px;
 	text-align: center;
 }
 
-.trabajo .post-thumbnail img:hover{
+.trabajo .post-thumbnail img:hover, .proyecto .post-thumbnail img:hover{
    opacity: 0.5;
   -webkit-transition: opacity 1500ms;
   -moz-transition: opacity 1500ms;
@@ -898,12 +856,12 @@ hr{
 
 }
 
-.read-more .flecha{ 
+.read-more .flecha, .read-more2 .flecha { 
     vertical-align: middle; 
 }
 
-.read-more:hover{
-	 margin-right: 15px;
+.read-more:hover, .read-more2:hover{
+	 margin-left: 15px;
 	-webkit-animation-name: enlace; 
     -webkit-animation-duration: 2s; 
     -webkit-animation-iteration-count: infinite; 
@@ -924,11 +882,6 @@ hr{
     to {color: #0101DF;}
 }
 
-/*******************************************************************************************************/
-/*******************************************************************************************************/
-/*    TRABAJOS Y PROYECTOS  */
-
-
 
 /*******************************************************************************************************/
 /*******************************************************************************************************/
@@ -939,24 +892,33 @@ hr{
 /*  Menu del blog */
 /*****************************/
 
+.menuBlog {
+	width: 95%;
+	margin:0px auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
 .menu-blog-container{
 	clear: both;
 	width: 100%;
 	display: block;
 	float: left;
 	margin-top: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	font-family: Arial;
 	font-weight: bolder;
 	font-size: 20px;
 	color:#fff;
-	padding: 10px;
+	padding-top: 10px;
 }
 
 .menu-blog-container ul {
 	list-style: none;
     margin: 0;
+    padding: 0px;
 }
+
 .menu-blog-container li {
 	display: inline-block;
 }
@@ -969,6 +931,7 @@ hr{
 	position: relative;
 	padding-bottom: 5px;
 }
+
 .menuBlog a:before {
   content: "";
   position: absolute;
@@ -1010,56 +973,346 @@ input.search-submit{
 	color: grey;
 }
 
+.hrBlog{
+	width: 100%;
+	background-color: #494545;
+	margin:0px;
+	text-align: center;
+}
+.hrBlog2{
+	width: 100%;
+	background-color: #494545;
+	margin:0px;
+	text-align: center;
+	margin-bottom: 30px;
+}
 
+/*****************************/
+/*  COLUMNAS  */
+/*****************************/
+
+.columna1{
+	clear: both;
+	width: 70%;
+	float: left;
+}
+
+.columna2{
+	width: 30%;
+	float: right;
+}
+
+.columna3{
+	clear: both;
+	width: 50%;
+	float: left;
+}
+
+.columna4{
+	width: 50%;
+	float: right;
+}
 /*****************************/
 /*  Post principal  */
 /*****************************/
 
 .principal, .resto-post{
 	clear: both;
-	width: 98%;
+	width: 90%;
 	display: block;
 	margin: 0px auto;
-	margin-top: 20px;
+	margin-top: 0px;
 	position: relative;
-
 }
+
+.principal  img, .principal .enlaceImagen{
+	width: 100%;
+    max-height: 400px;
+}
+
 .principal h2{
 	clear: both;
-	color:#000;
-}
-.principal  img{
+	color:#fff;
 	width: 100%;
-    height: auto;
-    margin: 0px auto;
+	text-align: center;
+	position: absolute;
+	background-color: #494545;
+	top: 83%;
+	left: 0px;
+	opacity: 0.8;
 }
 
 .principal  img, .post img{
-	border: 2px solid #494545;	
+	border: 2px solid #494545;
+	position: relative;
 }
 
 /*****************************/
 /*  Resto de Posts */
 /*****************************/
 
+.resto-post{
+	position: relative;
+	margin-top: 30px;
+}
+
 .resto-post .post{
 	float: left;
-    width: 45%;
-    margin-right: 2.5%;
-    margin-left: 2.5%;
+    width: 100%;
     position: relative;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .post h2{
 	font-size: 120%;
-	width: 70%;
-    color: #E6E6E6;
-    text-align: center;
-    background-color: #494545;	
+    color: #494545;
+    text-align: left;
+    margin:0px auto;	
 }
 
+.post img{
+	max-height: 220px;
+	width: 350px;
+}
+
+.read-more2{
+	color: #494545;   
+    float: left;
+    font-size: 20px; 
+    -webkit-transition: margin-left 2s; 
+    transition: margin-left 2s;
+
+}
+
+
+/*****************************/
+/*  SIDEBAR */
+/*****************************/
+
+aside{
+	clear: both;
+	text-align: center;
+}
+
+aside section{
+	width: 80%;
+	margin:0px auto;
+	margin-bottom: 50px;	
+}
+
+#wp-calendar caption{
+	color: #494545;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+#wp-calendar thead tr th{
+	color: #494545;
+}
+
+#wp-calendar tbody tr td{
+	color: #494545;
+}
+
+#wp-calendar tbody tr td a{
+	color: #0101DF;
+}
+
+#tag_cloud-2 h3{
+	display: none;
+}
+
+.tagcloud a{
+	color: #494545;
+}
+
+.tagcloud a:hover{
+	color: #0101DF;
+}
+
+
+/*****************************/
+/*  PAGINACIÓN */
+/*****************************/
+
+.paginacionDer{
+	position: absolute;
+	bottom:10px;
+	right: 0px;
+	color: #494545;
+}
+.paginacionIzq{
+	position: absolute;
+	bottom:10px;
+	right: 120px;
+	color: #494545;
+}
+.paginacionIzq2{
+	position: absolute;
+	bottom:10px;
+	right: 0px;
+	color: #494545;
+}
+
+/*****************************/
+/*  CATEGORIAS */
+/*****************************/
+
+.page-header .page-title{
+
+	margin-left: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #494545;
+}
+
+.page-title2{
+	margin-left: 35px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #494545;
+}
+
+.noResultados{
+	margin-left: 40px;
+}
+
+#main > div.columna1 > nav{
+	clear: both;
+    margin-left: 40px;
+}
+#main > div.columna1 > nav a{
+	color: #494545;
+}
+
+/*****************************/
+/*  POST */
+/*****************************/
+
+article > header > h1, article > div.post-thumbnail > img,
+article > div.entry-content,
+#comments{
+	display: block;
+	width: 90%;
+	margin: 0px auto;
+}
+
+article > header > h1{
+	margin-bottom: 20px;
+}
+
+article > div.post-thumbnail > img{
+    max-height: 400px;
+}
+
+article > div.entry-content{
+	
+	margin-top: 20px;
+}
+
+article > .entry-footer{
+	float: right;
+	margin-right: 50px;	
+}
+
+article > .entry-footer span a{
+	color: #0101DF;
+}
+
+article > .entry-footer span a:hover{
+	text-transform: uppercase;
+}
+
+article > footer > div.comment-author.vcard > img{
+	width: 75px;
+	height: 75px;
+}
+
+#comments > ol{
+	list-style-type: none;
+}
+
+#comments ol li article{
+	margin-bottom: 30px;
+}
+
+.comment-meta{
+	position: relative;
+}
+
+.comment-metadata{
+	position: absolute;
+	top: 30px;
+	left: 85px;
+}
+
+.comment-metadata a{
+	color: #494545;
+}
+
+.comment-metadata span a{
+	color: #0101DF;
+}
+
+article > footer > div.comment-author.vcard > b{
+	position: absolute;
+	top: 0px;
+	left: 85px;
+	text-transform: uppercase;
+}
+
+article > footer > div.comment-author.vcard > span{
+	margin-left: 5px;
+}
+
+article> div.comment-content > p{
+	width: 90%;
+}
+
+article > div.reply > a, form > p > a{
+	color: #0101DF;
+}
+
+#respond{
+	position: relative;
+	padding-top:40px;
+}
+
+#commentform > p.comment-form-comment{
+	float: left;
+	width: 50%;
+	height: 150px;
+
+}
+
+#commentform > p.comment-form-author, #commentform > p.comment-form-email, 
+#commentform > p.comment-form-url{
+	float: right;
+	margin: 0px;
+	margin-top: 20px;
+}
+
+
+#commentform > p > label{
+	display: block;
+}
+
+#commentform > p.form-submit{
+	clear: both;
+	display: block;
+}
+
+#submit{
+	background-color:#494545;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    padding: 16px 24px;
+    text-transform: uppercase;
+	width: auto;
+	margin-top: 70px;
+}
 
 /*******************************************************************************************************/
 /*******************************************************************************************************/

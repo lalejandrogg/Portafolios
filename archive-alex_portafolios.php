@@ -5,28 +5,11 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
-			<div class="trabajo-principal">
-				<?php
-				    $trabajos = array( 'posts_per_page' => 1,
-				    				   'post_type' => 'alex_portafolios',
-				    				   'category_name' => 'destacado_web');
-				    $loop = new WP_Query( $trabajos );
-				    if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
-				    
-				       
-				       <a href="<?php the_permalink(); ?>"><div class="post-thumbnail1">
-				       		<h2><?php the_title(); ?></h2>
-				 			<?php the_post_thumbnail();?>
-				 			<span class="dashicons dashicons-plus-alt seguir-leyendo"></span>
-				 		</div></a> 
+			<div class="trabajos">
 
-				         <?php endwhile;
-				          endif; 
-					wp_reset_query(); 
-				?>
-			</div>
+				<h2 class="tituloTrabajos">TRABAJOS</h2>
+			    <hr class="hrBlog"/>
 
-			<div class="resto-trabajos">
 				<?php
 				    $trabajos = array( 'posts_per_page' => 6,
 				    				   'post_type' => 'alex_portafolios',
@@ -43,8 +26,7 @@ get_header(); ?>
 
 				 		<span class="dashicons dashicons-plus-alt seguir-leyendo"></span>
 
-				 		<h2><?php the_title(); ?></h2>
-				    	<?php the_excerpt(); ?>	
+				 		<h2><?php the_title(); ?></h2>	
 				    </div>
 				    	  
 
@@ -53,6 +35,37 @@ get_header(); ?>
 					wp_reset_query(); 
 				?>
 			</div>	
+
+			<div class="proyectos">
+
+				<h2 class="tituloProyectos">PROYECTOS</h2>
+			    <hr class="hrBlog"/>
+
+				<?php
+				    $proyectos = array( 'posts_per_page' => 6,
+				    				   'post_type' => 'alex_portafolios',
+				    				   'category_name' => 'proyectos' );
+				    $loop = new WP_Query( $proyectos );
+				     if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
+
+				    
+				 	<div class="proyecto">
+
+				       <div class="post-thumbnail">
+				 			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+				 		</div>
+
+				 		<span class="dashicons dashicons-plus-alt seguir-leyendo"></span>
+
+				 		<h2><?php the_title(); ?></h2>
+				    </div>
+				    	  
+
+				         <?php endwhile; 
+				     endif; 
+					wp_reset_query(); 
+				?>
+			</div>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

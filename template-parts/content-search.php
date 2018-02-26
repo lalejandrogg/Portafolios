@@ -2,34 +2,24 @@
 /**
  * Template part for displaying results in search pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package AlexGarcia
  */
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<article class="resto-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-				alexgarcia_posted_on();
-				alexgarcia_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<div class="post">
+        <div class="columna3">
+            <a href="<?php the_permalink(); ?>"><?php alexgarcia_post_thumbnail('medium_large'); ?></a>
+        </div>
+        <div class="columna4">
+            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
-	<?php alexgarcia_post_thumbnail(); ?>
+            <?php the_excerpt(); ?> 
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php alexgarcia_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+            <a class="read-more2" href="<?php the_permalink(); ?>">Leer más <span class="dashicons dashicons-arrow-right-alt flecha"></span></a>
+        </div>
+    </div>
+
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -2,58 +2,26 @@
 /**
  * Template part for displaying posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package AlexGarcia
  */
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+<article class="resto-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-				alexgarcia_posted_on();
-				alexgarcia_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+	<div class="post">
+        <div class="columna3">
+            <a href="<?php the_permalink(); ?>"><?php alexgarcia_post_thumbnail('medium_large'); ?></a>
+        </div>
+        <div class="columna4">
+            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
-	<?php alexgarcia_post_thumbnail(); ?>
+            <?php the_excerpt(); ?> 
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'alexgarcia' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'alexgarcia' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php alexgarcia_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+            <a class="read-more2" href="<?php the_permalink(); ?>">Leer más <span class="dashicons dashicons-arrow-right-alt flecha"></span></a>
+        </div>
+    </div>
+	
 </article><!-- #post-<?php the_ID(); ?> -->
+
+
