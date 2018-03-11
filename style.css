@@ -509,10 +509,6 @@ a {
 	color: royalblue;
 }
 
-a:visited {
-	
-}
-
 a:hover, a:focus, a:active {
 	color: midnightblue;
 }
@@ -608,7 +604,7 @@ span.dashicon{
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -812,12 +808,31 @@ hr{
 .trabajo .post-thumbnail img, .proyecto .post-thumbnail img{
    border: 2px solid #494545;
 }
-.trabajo h2, .proyecto h2{
+.trabajo h2, .proyecto h2 {
 	font-size: 120%;
 	width: 70%;
     color: #E6E6E6;
     text-align: center;
     background-color: #494545;	
+}
+
+.entry-title{
+	float: left;
+	margin-top: 40px;
+	font-size: 25px;
+	width: 50%;
+	color: #E6E6E6;
+	text-align: center;
+	background-color: #494545;
+	text-transform: uppercase;
+}
+article > div.entry-content > div{
+	text-align: center;
+	margin-top: 40px;
+}
+
+article > div.entry-content > div > img{
+	margin-top: 20px;
 }
 
 .trabajo .seguir-leyendo, .proyecto .seguir-leyendo{
@@ -1012,6 +1027,12 @@ input.search-submit{
 	width: 50%;
 	float: right;
 }
+
+.columna5{
+	width: 90%;
+	margin: 0px auto;
+}
+
 /*****************************/
 /*  Post principal  */
 /*****************************/
@@ -1317,22 +1338,23 @@ article > div.reply > a, form > p > a{
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 /*   RESPONSIVE            */
-
-@media (max-width: 500px){
+@media (max-width: 768px){
 	.dashicons-menu{
-		display: block;
+		display: block !important;
 	}
 	.main-navigation ul {
 	clear: both;
-	}
+	}		
+
+}
+
+@media (max-width: 500px){
 	.site-branding{
 		margin-top: 30px;
 	}
 
-	
-		
-	}
 }
+
 @media (max-width: 350px){
 .site-title a{
 		font-size: 80px;

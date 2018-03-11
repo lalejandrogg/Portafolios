@@ -26,7 +26,7 @@
 					<a href="https://www.facebook.com/lalejandrogg" rel="nofollow"><span class="dashicons dashicons-facebook"></span></a>
 					<a href="https://twitter.com/LAlejandroGG" rel="nofollow"><span class="dashicons dashicons-twitter"></span></a>
 				</div>
-				<button class="menu-toggle dashicons dashicons-menu" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', 'alexgarcia' ); ?></button>
+				<button style="display: none;" class="menu-toggle dashicons dashicons-menu" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', 'alexgarcia' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',

@@ -189,6 +189,20 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
    wp_enqueue_style( 'dashicons' );
  }
 
+/**
+ * Mover los javascripts al footer para que no salte el fallo en google page speed de
+ * Eliminar el JavaScript que bloquea la visualización y el CSS del contenido de la mitad superior de la página
+ */
+ function footer_enqueue_scripts() {
+	remove_action('wp_head', 'wp_print_scripts');
+	remove_action('wp_head', 'wp_print_head_scripts', 9);
+	remove_action('wp_head', 'wp_enqueue_scripts', 1);
+	add_action('wp_footer', 'wp_print_scripts', 5);
+	add_action('wp_footer', 'wp_enqueue_scripts', 5);
+	add_action('wp_footer', 'wp_print_head_scripts', 5);
+	}
+	add_action('after_setup_theme', 'footer_enqueue_scripts');
+
 
 
 
