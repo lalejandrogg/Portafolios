@@ -161,7 +161,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * FILTRO PARA SUSTITUIR EL [...] DE LA FUNCION the_excerpt() POR EL MENSAJE QUE QUIERAS EN MI CASO "-->"
- SE COLOCA EN EL FUNCTIONS.PHP
+ * SE COLOCA EN EL FUNCTIONS.PHP
  *
  * @param string $more "Read more" excerpt string.
  * @return string (Maybe) modified "read more" excerpt string.
@@ -202,6 +202,22 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 	add_action('wp_footer', 'wp_print_head_scripts', 5);
 	}
 	add_action('after_setup_theme', 'footer_enqueue_scripts');
+
+/**
+ * Registro de una nueva area para widgets
+ */
+
+register_sidebar(
+	array(
+		'name' => 'Widgets Contacto',
+		'id' => 'widgets-contacto',
+		'description' => 'Área de widgets que aparece en la pagina de contacto',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	)
+	);
 
 
 
