@@ -19,6 +19,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>
