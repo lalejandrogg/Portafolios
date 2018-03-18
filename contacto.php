@@ -11,11 +11,11 @@ Template Name: Contacto
 
         <div class="columna1">       
         
-            <h1>Alex García Gil</h1>
+            <h1 class="tituloContacto">Alex García Gil</h1>
+            <hr class="hrContacto"/>
 
-            <p>
-                Manda tus consultas a través de este sencillo formulario, lo leeré y te responderé lo antes posible.</br></br>
-                También puedes contactar mediante el 666638363 
+            <p class="pContacto">
+                Manda tus consultas a través de este sencillo formulario, te responderé lo antes posible.
             </p>
 
             <form id="contact-form" name="contact-form" action="<?php echo get_permalink();?>#contact-form" method="post">
@@ -88,9 +88,9 @@ Template Name: Contacto
                 }
               }?>
  
-              <div class="form-group">
+              <div class="grupo-nombre">
                 <label for="f_name">Nombre <span class="asterisk">*</span></label>
-                <input type="text" id="f_name" name="f_name" class="form-control" value="<?php echo $f_name;?>" placeholder="Introduce tu nombre" required aria-required="true">
+                <input type="text" id="f_name" name="f_name" class="nombre" value="<?php echo $f_name;?>" placeholder="Introduce tu nombre" required aria-required="true">
  
                 <?php //Comprobamos si hay errores en la validación del campo Nombre
                 if ( is_wp_error( $reg_errors ) ) {
@@ -104,9 +104,9 @@ Template Name: Contacto
                 }?>
               </div>
  
-              <div class="form-group">
+              <div class="grupo-email">
                 <label for="f_email">E-mail <span class="asterisk">*</span></label>
-                <input type="email" id="f_email" name="f_email" class="form-control" value="<?php echo $f_email;?>" placeholder="Introduce tu e-mail" required aria-required="true">
+                <input type="email" id="f_email" name="f_email" class="email" value="<?php echo $f_email;?>" placeholder="Introduce tu e-mail" required aria-required="true">
  
                 <?php //Comprobamos si hay errores en la validación del campo E-mail
                 if ( is_wp_error( $reg_errors ) ) {
@@ -131,9 +131,9 @@ Template Name: Contacto
                 }?>
               </div>
  
-              <div class="form-group">
+              <div class="grupo-texto">
                 <label for="f_message">Consulta <span class="asterisk">*</span></label>
-                <textarea id="f_message" name="f_message" rows="7" class="form-control" placeholder="Escribe aquí tu consulta" required aria-required="true"><?php echo $f_message;?></textarea>
+                <textarea id="f_message" name="f_message" rows="7" class="texto" placeholder="Escribe aquí tu consulta" required aria-required="true"><?php echo $f_message;?></textarea>
  
                 <?php //Comprobamos si hay errores en la validación del campo Mensaje
                 if ( is_wp_error( $reg_errors ) ) {
@@ -147,7 +147,7 @@ Template Name: Contacto
                 }?>
               </div>
  
-              <button type="submit" id="btn-submit" name="btn-submit" class="btn btn-default">Enviar consulta</button>
+              <button type="submit" id="btn-submit" name="btn-submit" class="enviar">Enviar consulta</button>
             </form>
 
             <div class="avisolegal">
