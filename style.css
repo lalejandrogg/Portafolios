@@ -770,7 +770,7 @@ hr{
 	background-color: #F3F781;
 }
 .fondo{
-	background-image: url(http://pruebas.local/wp-content/uploads/Fondo.jpg);
+	background-image: url(http://portafolio.local/wp-content/uploads/2018/09/Fondo-5.jpg);
     background-position: center center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -897,6 +897,29 @@ article > div.entry-content > div > img{
     to {color: #0101DF;}
 }
 
+.imagenesTrabajos{
+	width:95%;
+	margin:0px auto;
+
+}
+.imagenTrabajo{
+	padding: 20px;
+}
+
+.mac{
+	width:auto;
+	height:293px;
+}
+
+.ipad{
+	width:auto;
+	height:300px;
+}
+
+.iphone{
+	width:auto;
+	height:245px;
+}
 
 /*******************************************************************************************************/
 /*******************************************************************************************************/
@@ -1406,6 +1429,81 @@ article > div.reply > a, form > p > a{
 }
 
 
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+/*  ACERCA DE  */
+
+.tituloContacto{
+	font-size: 30px;
+}
+
+.hola{
+	font-size: 60px;
+	float: left;
+	padding: 0px 20px 0px 20px;
+	color: #494545;
+}
+
+.presentacion{
+	margin-top: 40px;
+	margin-left: 30px;
+}
+
+.parrafos{
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.parrafosFinal{
+	clear: both;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.seccion1{
+	float:left;
+	width:50%;
+	margin-bottom: 10px;
+}
+
+.seccion2{
+	float:right;
+	width:50%;
+	margin-bottom: 10px;
+}
+
+.tituloSeccion{
+	margin-left: 30px;
+	font-size: 30px;
+}
+
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+/*  404  */
+
+.cuadros{
+	margin:0px auto;
+	width:70%;
+}
+
+.cuadro{
+	float: left;
+	padding: 10px;
+	width:25%;
+}
+
+.imagen404{
+	float: right;
+	width:30%;
+	margin-right:100px;
+	margin-top: 40px;
+}
+
+.titulo404{
+	margin-top: 20px;
+	font-size: 50px;
+	text-align: center;
+}
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 /*   RESPONSIVE            */

@@ -1,14 +1,20 @@
-<?php get_header(); ?>
+<?php
+/**
+* Blog template
+*
+
+* Template name: Blog
+*/
+get_header();
+
+?>
 
     <div id="primary" class="site-content">
-
         <div id="content" role="main">
 
             <div class="menuBlog">
-
                 <?php wp_nav_menu($args = array('menu' => 'Blog'));
                 get_search_form (); ?>
-
                 <hr class="hrBlog"/>
 
             </div>
@@ -32,33 +38,46 @@
                         wp_reset_postdata();
                     ?>
                 </div>
+
                 <div class="resto-post">
+
                     <h2 class="ultimosPost">Últimos Posts</h2>
+
                     <hr class="hrBlog"/>
-                    <?php 
-                     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-                      $args = array( 
+
+                    <?php
+                    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                      $args = array(    'posts_per_page' => 3,
                                         'post_type' => 'post',
-                                        'tag__not_in' => array (20),
+                                        'post__not_in' => array(67),
                                         'paged' => $paged );
                         $loop = new WP_Query( $args );
+
                          if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
+
                         
-                        <div class="post">
-                            <div class="columna3">
-                                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium_large'); ?></a>
-                            </div>
+                         <div class="post">
+
+                             <div class="columna3">
+
+                                   <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium_large'); ?></a>
+
+                               </div>
+
                             <div class="columna4">
-                                <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-                                <?php the_excerpt(); ?>   
-                                <a class="read-more2" href="<?php the_permalink(); ?>">Leer más <span class="dashicons dashicons-arrow-right-alt flecha"></span></a>
-                            </div>
+
+                                 <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+
+                                 <?php the_excerpt(); ?>    
+
+                             </div>
+
                         </div>
                               
-                             <?php endwhile; 
+                        <?php endwhile; 
 
-                             //PAGINACION 
-                               $next_page_link = get_next_posts_page_link( $loop->max_num_pages );
+                              //PAGINACION 
+                              $next_page_link = get_next_posts_page_link( $loop->max_num_pages );
                               $previous_page_link = get_previous_posts_page_link();
 
                               $total_pages = $loop->max_num_pages;      //funcion para saber cual es el número total de páginas
@@ -78,13 +97,16 @@
                              <?php } 
                   
                          endif;
+
                         wp_reset_postdata();  ?>
-                        <hr class="hrBlog2"/>
+
                 </div>    
             </div>
             <div class="columna2">
                 <?php get_sidebar(); ?>
             </div>
+
         </div><!-- #content -->
     </div><!-- #primary -->
- <?php get_footer(); ?>
+
+<?php get_footer(); ?>

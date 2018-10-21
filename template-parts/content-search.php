@@ -17,8 +17,6 @@
 
             <?php the_excerpt(); ?> 
 
-
-            <a class="read-more2" href="<?php the_permalink(); ?>">Leer más <span class="dashicons dashicons-arrow-right-alt flecha"></span></a>
         </div>
     </div>
 
