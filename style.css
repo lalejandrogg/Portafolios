@@ -931,6 +931,7 @@ article > div.entry-content > div > img{
 /*****************************/
 
 .menuBlog {
+	clear: both;
 	width: 95%;
 	margin:0px auto;
 	margin-top: 20px;
@@ -1018,6 +1019,7 @@ input.search-submit{
 	text-align: center;
 }
 .hrBlog2{
+	clear: both;
 	width: 100%;
 	background-color: #494545;
 	margin:0px;
@@ -1355,7 +1357,12 @@ article > div.reply > a, form > p > a{
     padding: 16px 24px;
     text-transform: uppercase;
 	width: auto;
-	margin-top: 70px;
+	margin-top: 10px;
+}
+.comment-form-cookies-consent{
+	clear: both;
+	display: block;
+	padding-top: 30px;
 }
 
 
@@ -1445,6 +1452,7 @@ article > div.reply > a, form > p > a{
 }
 
 .presentacion{
+	width: 90%;
 	margin-top: 40px;
 	margin-left: 30px;
 }
@@ -1455,6 +1463,7 @@ article > div.reply > a, form > p > a{
 }
 
 .parrafosFinal{
+	width: 90%;
 	clear: both;
 	margin-top: 5px;
 	margin-left: 30px;
@@ -1462,13 +1471,13 @@ article > div.reply > a, form > p > a{
 
 .seccion1{
 	float:left;
-	width:50%;
+	width:45%;
 	margin-bottom: 10px;
 }
 
 .seccion2{
-	float:right;
-	width:50%;
+	float:left;
+	width:45%;
 	margin-bottom: 10px;
 }
 
@@ -1483,7 +1492,7 @@ article > div.reply > a, form > p > a{
 
 .cuadros{
 	margin:0px auto;
-	width:70%;
+	width:90%;
 }
 
 .cuadro{
@@ -1507,31 +1516,181 @@ article > div.reply > a, form > p > a{
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 /*   RESPONSIVE            */
-@media (max-width: 768px){
+
+@media (max-width: 1350px){
+
+	/*404*/
+	.imagen404{
+		clear: both;
+        float: none;
+    	display: block;
+    	width: 50%;
+		margin: 0px auto;
+		margin-bottom: 50px;
+
+	}
+
+	.cuadros{
+		display: block;
+		width: 80%;
+		margin-left: 15%;
+	}
+	
+	.cuadro{
+		width:50%;
+	}
+		
+}
+
+@media (max-width: 960px){
+	/*MENÚ*/
 	.dashicons-menu{
 		display: block !important;
 	}
+
 	.main-navigation ul {
-	clear: both;
-	}		
+		clear: both;
+		margin-left: 40px;
 
-}
+	}	
 
-@media (max-width: 500px){
-	.site-branding{
-		margin-top: 30px;
+	.main-navigation li {
+		display: block;
+		text-align: left;
 	}
 
-}
-
-@media (max-width: 350px){
-.site-title a{
-		font-size: 80px;
+	/*HOME*/
+	.site-title a{ 
+		font-size: 60px;	
+	}
 		
-	}
 	.site-description{
-		font-size: 20px;
-	}		
+		font-size: 25px;
+	}
+
+	/*SIDEBAR*/
+	.columna1{
+		clear: both;
+		width: 100%;
+	}
+	
+	.columna2{
+		width: 100%;
+	}
+
+	/*CONTACTO*/
+	.content-area  {
+		display: inline;	
+		width: 100%;
+	}
+
+	/*TRABAJOS*/
+	.trabajos .trabajo, .proyectos .proyecto{
+		width: 90%;
+	}
+}
+
+@media (max-width: 839px){
+	/*BLOG*/
+	.menuBlog form{
+		width: 100%;
+		top: 0px;
+		right: 0px;
+	}
+	.menu-blog-container{
+		margin-top: 35px;
+	}
+	.search-field{
+		width: 100%;
+	}
+	.post-principal{
+		padding-bottom: 30px;
+	}
+	.columna3{
+		margin-bottom: 20px;
+	}
+	.columna3, .columna4{
+		display: block;
+		width: 100%;
+	}
+	.columna3 a img{
+		width: 100%;
+	}
+	
+}
+
+@media (max-width: 680px){
+	/*CONTACTO*/
+	.grupo-nombre{
+		display: inline;
+		width: 90%;
+		margin-left: 20px;
+	}
+	.nombre, .email{
+		width: 100%;
+	}
+
+	.grupo-email{
+		display: inline;
+		width: 90%;
+		margin-left: 20px;
+		margin-bottom: 50px;
+	}
+
+	.avisolegal p{
+		width: 80%;
+	}
+	/*POST*/
+	#commentform > p.comment-form-comment{
+		width: 100%;
+	}
+	.comment-form-comment{
+		margin-bottom: 70px;
+	}
+	#commentform > p.comment-form-author, #commentform > p.comment-form-email, 
+	#commentform > p.comment-form-url{
+		clear: both;
+		display: block;
+		width: 100%;
+
+	}	
+	#author, #email, #url{
+		width: 100%;
+	}
+
+	/*404*/
+	.cuadros{
+		margin:0px auto;
+		text-align: center;
+	}
+	.cuadro{
+		width:100%;
+	}
+}
+
+@media (max-width: 375px){
+
+	/*ACERCA DE*/
+	.hola{
+		width: 100%;
+	}	
+	.seccion1, .seccion2, .parrafosFinal, .presentacion{
+		width: 80%;
+		margin: 0px auto;
+	}	
+	.parrafosFinal{
+		margin-bottom: 30px;
+	}
+	.pContacto{
+		width: 75%;
+	}
+
+	/*TRABAJOS*/
+	.trabajo .seguir-leyendo, .proyecto .seguir-leyendo{
+		top:20%;
+		right: 50%;
+	}
+	
 }
 /*--------------------------------------------------------------
 ## Posts and pages
